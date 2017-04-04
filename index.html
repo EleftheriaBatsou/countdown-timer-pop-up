@@ -1,0 +1,38 @@
+<html>
+
+<head>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+  
+  
+<body>
+<script>
+function countDown(secs,elem) {
+	var element = document.getElementById(elem);
+	element.innerHTML = "Please wait for "+secs+" seconds";
+	if(secs < 1) {
+		clearTimeout(timer);
+		element.innerHTML = '<h2 style="text-align: center">Countdown Complete!</h2>';
+		element.innerHTML += '<img src="http://i717.photobucket.com/albums/ww173/prestonjjrtr/Funny/CatPopUpCan.gif"><a href="http://codepen.io/EleftheriaBatsou" target="_blank"><p style="text-align: center">Click here if you want to see my projects</p></a></br>';
+	}
+	secs--;
+	var timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
+}
+</script>
+  
+  <h2 style="text-align: center"> Countdown Timer</h2>
+
+  
+  
+  
+<div id="status" style="text-align: center"></div>
+<script>countDown(6,"status");</script>
+  
+  
+  
+   <div style="text-align: center" id="footer">
+    <h5><a href="http://www.eleftheriabatsou.com" target="_blank">Eleftheria Batsou</a> | <a href="http://codepen.io/EleftheriaBatsou" target="_blank">Projects</a></h5>
+  </div> <!-- end footer -->
+  
+  </body>
+  </html>
